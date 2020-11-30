@@ -27,6 +27,7 @@ public class GamePanel extends JPanel implements ActionListener{
     Random random;
 
 
+
     GamePanel(){
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
@@ -50,6 +51,11 @@ public class GamePanel extends JPanel implements ActionListener{
 
     public void draw(Graphics g) {
 
+        // Grid
+        for(int i=0; i<SCREEN_HEIGHT/UNIT_SIZE; i++) {
+            g.drawLine(i*UNIT_SIZE,0,i*UNIT_SIZE,SCREEN_HEIGHT);
+            g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);
+        }
     }
 
     public void newApple(){
