@@ -1,4 +1,4 @@
-package com.company;
+package com.company.model;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +28,7 @@ public class GamePanel extends JPanel implements ActionListener{
 
 
 
-    GamePanel(){
+    public GamePanel(){
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
         this.setBackground(Color.black);
@@ -52,7 +52,7 @@ public class GamePanel extends JPanel implements ActionListener{
     public void draw(Graphics g) {
 
         if(running) {
-            
+
             g.setColor(Color.MAGENTA);
             g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 
